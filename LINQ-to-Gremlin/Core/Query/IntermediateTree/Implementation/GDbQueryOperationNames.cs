@@ -1,0 +1,40 @@
+﻿namespace LINQtoGremlin.Core.Query.IntermediateTree
+{
+    public enum GDbQueryOperationNames
+    {
+        ANY,
+        ARITHMETIC_ADD,
+        ARITHMETIC_DIVIDE,
+        ARITHMETIC_MULTIPLY,
+        ARITHMETIC_SUBTRACT,
+        AVERAGE,
+        CONSTANT,
+        COUNT,
+        FIRST,
+        INCLUDE_CHAIN,
+        LAST,
+        LOGICAL_AND,
+        LOGICAL_EXCLUSIVE_OR,
+        LOGICAL_NOT,
+        LOGICAL_OR,
+        LONG_COUNT,
+        MAX,
+        MIN,
+        ORDER_BY,
+        PROPERTY_SELECT,
+        RELATIONAL_EQUAL,
+        RELATIONAL_GREATER_THAN,
+        RELATIONAL_GREATER_THAN_OR_EQUAL,
+        RELATIONAL_LESS_THAN,
+        RELATIONAL_LESS_THAN_OR_EQUAL,
+        RELATIONAL_NOT_EQUAL,
+        SELECT,
+        SINGLE,
+        SKIP,
+        SUM,
+        TAKE,
+        THEN_BY,
+        UNKNOWN,
+        WHERE
+    }
+}

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28CC09BB-BE1F-44A2-95A0-EEE63836D398}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LINQtoGremlin</RootNamespace>
+    <AssemblyName>LINQtoGremlin</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gremlin.Net, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gremlin.Net.3.3.0-rc1\lib\netstandard1.3\Gremlin.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.2.0.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.1.1\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.1.1\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.TypeExtensions.4.3.0\lib\net462\System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Diagnostics\Exceptions\IGDbDatabaseIntegrityDamagedException.cs" />
+    <Compile Include="Core\Diagnostics\Exceptions\Implementation\GDbDatabaseIntegrityDamagedException.cs" />
+    <Compile Include="Core\Diagnostics\Implementation\GDbEventId.cs" />
+    <Compile Include="Core\Extensions\Implementation\GDbExtensionsOfDbContextOptionsBuilder.cs" />
+    <Compile Include="Core\Extensions\Implementation\GDbExtensionsOfIServiceCollection.cs" />
+    <Compile Include="Core\Extensions\Internal\Implementation\GDbExtensionsOfIDiagnosticsLogger.cs" />
+    <Compile Include="Core\Extensions\Internal\Implementation\GDbExtensionsOfType.cs" />
+    <Compile Include="Core\Graph\IGDbContext.cs" />
+    <Compile Include="Core\Graph\IGDbModelDescriptor.cs" />
+    <Compile Include="Core\Graph\IGDbModelDescriptorEntry.cs" />
+    <Compile Include="Core\Graph\IGDbModelRelationshipDescriptor.cs" />
+    <Compile Include="Core\Graph\Implementation\GDbModelDescriptor.cs" />
+    <Compile Include="Core\Graph\Implementation\GDbModelDescriptorEntry.cs" />
+    <Compile Include="Core\Graph\Implementation\GDbModelDescriptorEntryTypes.cs" />
+    <Compile Include="Core\Graph\Implementation\GDbModelRelationshipDescriptor.cs" />
+    <Compile Include="Core\Graph\LanguageSpecific\GremlinQuery\IGDbGremlinQueryExecutorFactory.cs" />
+    <Compile Include="Core\Graph\LanguageSpecific\GremlinQuery\IGDbGremlinQueryExecutor.cs" />
+    <Compile Include="Core\Graph\LanguageSpecific\GremlinQuery\Implementation\GDbGremlinQueries.cs" />
+    <Compile Include="Core\Graph\Implementation\GDbModelConstants.cs" />
+    <Compile Include="Core\Graph\LanguageSpecific\GremlinQuery\Implementation\GDbGremlinQueryExecutor.cs" />
+    <Compile Include="Core\Graph\LanguageSpecific\GremlinQuery\Implementation\GDbGremlinQueryExecutorFactory.cs" />
+    <Compile Include="Core\Graph\LanguageSpecific\IGDbQueryExecutorFactory.cs" />
+    <Compile Include="Core\Graph\LanguageSpecific\IGDbQueryExecutor.cs" />
+    <Compile Include="Core\Helper\Implementation\GDbReflectionHelper.cs" />
+    <Compile Include="Core\Infrastructure\IGDbContextOptionsBuilder.cs" />
+    <Compile Include="Core\Infrastructure\Implementation\GDbContextOptionsBuilder.cs" />
+    <Compile Include="Core\Infrastructure\Internal\IGDbContextOptionsExtension.cs" />
+    <Compile Include="Core\Infrastructure\Internal\Implementation\GDbContextOptionsExtension.cs" />
+    <Compile Include="Core\Properties\GDbStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GDbStrings.Designer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Query\ExpressionVisitors\Internal\IGDbEntityQueryableExpressionVisitor.cs" />
+    <Compile Include="Core\Query\ExpressionVisitors\Internal\Implementation\GDbEntityQueryableExpressionVisitor.cs" />
+    <Compile Include="Core\Query\ExpressionVisitors\Internal\Implementation\GDbEntityQueryableExpressionVisitorFactory.cs" />
+    <Compile Include="Core\Query\ExpressionVisitors\Internal\IGDbEntityQueryableExpressionVisitorFactory.cs" />
+    <Compile Include="Core\Query\IntermediateTree\IGDbQueryOperation.cs" />
+    <Compile Include="Core\Query\IntermediateTree\IGDbQueryOperationArgument.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationAverage.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationArithmetic.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationIncludeChain.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationParameter.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationConstant.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationCount.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationLogical.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationAny.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationLast.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationLongCount.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationFirst.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationTake.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationSkip.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationSingle.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationMax.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationMin.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationNoArguments.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationOneArgument.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperation.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationNames.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationOrderBy.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationPropertySelector.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationRelational.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationSelect.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationSum.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationThenBy.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationTwoArguments.cs" />
+    <Compile Include="Core\Query\IntermediateTree\Implementation\GDbQueryOperationWhere.cs" />
+    <Compile Include="Core\Query\Internal\IGDbEntityQueryModelVisitor.cs" />
+    <Compile Include="Core\Query\Internal\IGDbEntityQueryModelVisitorFactory.cs" />
+    <Compile Include="Core\Query\Internal\IGDbQueryContext.cs" />
+    <Compile Include="Core\Query\Internal\IGDbQueryContextFactory.cs" />
+    <Compile Include="Core\Query\Internal\Implementation\GDbEntityQueryModelVisitor.cs" />
+    <Compile Include="Core\Query\Internal\Implementation\GDbQueryContext.cs" />
+    <Compile Include="Core\Query\Internal\Implementation\GDbQueryContextFactory.cs" />
+    <Compile Include="Core\Query\Internal\Implementation\GDbEntityQueryModelVisitorFactory.cs" />
+    <Compile Include="Core\Storage\Internal\IGDbDatabaseCredentials.cs" />
+    <Compile Include="Core\Storage\Internal\Implementation\GDbDatabaseCredentials.cs" />
+    <Compile Include="Core\Storage\Internal\IGDbContextTransaction.cs" />
+    <Compile Include="Core\Storage\Internal\IGDbStore.cs" />
+    <Compile Include="Core\Storage\Internal\IGDbStoreCache.cs" />
+    <Compile Include="Core\Storage\Internal\Implementation\GDbContextTransactionManager.cs" />
+    <Compile Include="Core\Storage\Internal\Implementation\GDbDatabase.cs" />
+    <Compile Include="Core\Storage\Internal\Implementation\GDbDatabaseCreator.cs" />
+    <Compile Include="Core\Storage\Internal\IGDbDatabase.cs" />
+    <Compile Include="Core\Storage\Internal\IGDbDatabaseCreator.cs" />
+    <Compile Include="Core\Storage\Internal\IGDbContextTransactionManager.cs" />
+    <Compile Include="Core\Graph\Implementation\GDbContext.cs" />
+    <Compile Include="Core\Storage\Internal\Implementation\GDbContextTransaction.cs" />
+    <Compile Include="Core\Storage\Internal\Implementation\GDbStore.cs" />
+    <Compile Include="Core\Storage\Internal\Implementation\GDbStoreCache.cs" />
+    <Compile Include="Core\Extensions\Implementation\GDbExtensionsOfIGDbStoreCache.cs" />
+    <Compile Include="Graph\GraphElements\Implementation\GraphElement.cs" />
+    <Compile Include="Graph\GraphElements\IGraphElement.cs" />
+    <Compile Include="Graph\GraphElements\Vertex\Implementation\Vertex.cs" />
+    <Compile Include="Graph\GraphElements\Vertex\IVertex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Core\Properties\GDbStrings.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Properties\GDbStrings.Designer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GDbStrings.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
